@@ -1,0 +1,32 @@
+@import '../../../styles/variables';
+@import '../../../styles/common';
+
+.search {
+  position: relative;
+
+  .hide {
+    @extend .hide;
+  }
+
+  .clear {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    margin-top: -10px;
+    font-size: 20px;
+    color: $action-color;
+    cursor: pointer;
+  }
+
+  [data-react-toolbox='input'] {
+    input {
+      padding-right: 25px;
+    }
+  }
+}
+
+.empty {
+  [data-react-toolbox='font-icon'] {
+    color: $disabled;
+  }
+}

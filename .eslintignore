@@ -1,0 +1,7 @@
+spec.js
+specs/
+webpack
+dist
+node_modules
+*.scss
+config/*.js

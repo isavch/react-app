@@ -1,0 +1,31 @@
+@import 'styles/variables';
+
+.filters-container {
+  float: left;
+}
+
+.filters-section {
+  clear: both;
+}
+
+.grid {
+  padding-top: 25px;
+  clear: both;
+}
+
+.rightControls {
+  float: right;
+}
+
+.title {
+  float: left;
+  margin-top: 10px;
+}
+
+.add-user {
+  float: right;
+}
+
+.disabledUser {
+  color: $disabled;
+}

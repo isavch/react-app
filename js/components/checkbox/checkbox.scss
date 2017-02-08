@@ -1,0 +1,17 @@
+.container {
+  display: block;
+  float: left;
+  width: 30px;
+  height: 30px;
+  background-position: -403px -155px;
+  background-image: url(images/BL_Sprite_common.svg);
+}
+
+.is-checked {
+  background-position: -403px -125px;
+}
+
+.label {
+  display: inline-block;
+  margin-top: 5px;
+}

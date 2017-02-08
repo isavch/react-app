@@ -1,0 +1,59 @@
+@import './variables';
+
+.common-input {
+  border: none;
+  color: $primary;
+  display: inline-block;
+  font-size: 15px;
+  height: 30px;
+  line-height: 30px;
+  margin-top: 4px;
+  padding: 0 10px;
+}
+
+.input-medium {
+  width: 54%;
+}
+
+.input-small {
+  margin-left: 0;
+  width: 20%;
+}
+
+.input-indent {
+  margin-right: 3%;
+}
+
+.input {
+  padding: 15px 0;
+}
+
+.inputElement {
+  font-size: 15px;
+  padding: 10px 0 5px;
+}
+
+.bar::after {
+  background-color: $successPass;
+}
+
+.bar::before {
+  background-color: $successPass;
+}
+
+.label {
+  color: $main-font-color;
+  font-size: 16px;
+  top: 25px;
+}
+
+.inputElement:focus:not([disabled]):not([readonly]) ~ .label:not(.fixed) {
+  color: $successPass;
+  font-size: 16px;
+  top: 0;
+}
+
+.inputElement.filled ~ .label:not(.fixed) {
+  font-size: 16px;
+  top: 0;
+}

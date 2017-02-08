@@ -1,0 +1,80 @@
+@import '../../../styles/variables';
+
+.container {
+  width: 100%;
+  margin-bottom: 25px;
+  overflow-y: auto;
+  flex-grow: 1;
+
+  .icon {
+    font-size: 16px;
+    margin-left: 5px;
+    color: $grid-icon-color;
+  }
+
+  .active-icon {
+    color: $grid-active-icon-color;
+  }
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.heading {
+  text-transform: capitalize;
+  text-align: left;
+  font-weight: bold;
+  color: $grid-heading-color;
+  border-bottom: 1px solid $grid-border-color;
+}
+
+.row {
+  &:hover {
+    background: $grid-hover-background;
+  }
+}
+
+.selectable {
+  transition: background-color .3s;
+  cursor: pointer;
+}
+
+.cell {
+  padding: 14px 10px 9px;
+  vertical-align: middle;
+}
+
+.selected {
+  td {
+    background: $grid-selected-background;
+  }
+}
+
+.disabled {
+  td {
+    background: $grid-disabled-background;
+    color: $grid-disabled-color;
+  }
+}
+
+.status {
+  color: $grid-status-color;
+}
+
+.controls {
+  width: 50px;
+}
+
+.even {
+  background-color: $grid-even-background;
+}
+
+.message {
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  padding-top: 40px;
+  text-transform: uppercase;
+}

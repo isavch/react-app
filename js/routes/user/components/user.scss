@@ -1,0 +1,33 @@
+.table-container {
+  display: flex;
+  margin: 30px 0;
+}
+
+.control-panel {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.is-loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.progress-container {
+  align-items: center;
+  background: rgba(256, 256, 256, .4);
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  top: 0; right: 0; bottom: 0; left: 0;
+  position: fixed;
+  z-index: 9999;
+}
+
+.table-header {
+  margin-top: 40px;
+}
+
+.checkbox {
+  margin-right: 5px;
+}

@@ -1,0 +1,52 @@
+@import '../../../styles/variables';
+
+.baseItemLayout {
+  margin-left: 5px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.item {
+  @extend .baseItemLayout;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  &:first-child {
+    margin-left: 0;
+  }
+  a {
+    color: $pagination-control-color;
+  }
+}
+
+.previous {
+  @extend .baseItemLayout;
+  color: $pagination-control-color;
+}
+
+.next {
+  @extend .baseItemLayout;
+  color: $pagination-control-color;
+}
+
+.active {
+  cursor: auto;
+  background: $pagination-active-background;
+  a {
+    color: $pagination-active-color;
+  }
+}
+
+.icon {
+  margin-top: 3px;
+}
+
+.disabled {
+  color: $disabled-color;
+}

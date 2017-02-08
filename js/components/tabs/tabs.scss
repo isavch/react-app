@@ -1,0 +1,40 @@
+@import '../../../styles/variables';
+@import '../../../styles/common';
+
+.container {
+  display: block;
+}
+.panel {
+  overflow-x: hidden;
+  padding: 60px 20px 0;
+}
+
+.nav-pannel {
+  box-shadow: 0 0 10px 0 $settings-color;
+}
+
+.item {
+  background: $primary;
+  border-right: 0;
+  color: $light;
+  display: inline-block;
+  font-size: 15px;
+  line-height: 1.2;
+  list-style-type: none;
+  padding: 15px 0;
+  text-align: center;
+}
+
+.fixed-block {
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+}
+
+.pointer {
+  background: $light;
+  bottom: 0;
+  height: 3px;
+  position: absolute;
+  transition: .4s;
+}

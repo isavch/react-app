@@ -1,0 +1,48 @@
+@import 'styles/variables';
+
+.container {
+  position: fixed;
+  bottom: 0;
+  left: calc(50% - 200px);
+  width: 400px;
+  z-index: 3;
+}
+
+.notification {
+  text-align: center;
+  border-radius: 5px;
+  margin: 10px;
+  line-height: 45px;
+  height: 45px;
+  color: #fff;
+  position: relative;
+  transition: 0.4s;
+}
+
+.notification-enter {
+  opacity: 0.1;
+  bottom: -100px;
+}
+
+.notification-enter-active {
+  opacity: 1;
+  bottom: 0;
+}
+
+.notification-leave {
+  opacity: 0.1;
+  bottom: 0;
+}
+
+.notification-leave-active {
+  opacity: 0;
+  bottom: -100px;
+}
+
+.error {
+  background-color: $error;
+}
+
+.success {
+  background-color: $success;
+}

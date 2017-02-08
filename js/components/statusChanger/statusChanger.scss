@@ -1,0 +1,53 @@
+@import '../../../styles/variables';
+
+.wrapper {
+  position: fixed;
+  width: 100%;
+  bottom: -80px;
+  border-top: 1px solid $arrow-border;
+  transition: 0.3s ease bottom;
+}
+
+.is-expanded {
+  bottom: 75px;
+}
+
+.header {
+  padding: 10px;
+  background: $light;
+}
+
+.body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: $light;
+}
+
+.status {
+  display: inline-block;
+  font-size: 20px;
+  line-height: 25px;
+  color: $primary;
+}
+
+.label {
+  display: inline-block;
+  margin-right: 5px;
+  font-size: 10px;
+  color: $secondary;
+  vertical-align: top;
+  line-height: 21px;
+}
+
+.button {
+  width: calc(50% - 20px);
+  margin: 10px;
+}
+
+.arrow {
+  float: right;
+  width: 25px;
+  height: 20px;
+}

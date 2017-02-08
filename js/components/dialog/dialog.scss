@@ -1,0 +1,79 @@
+@import '../../../styles/variables';  
+@import '../../../styles/common';  
+
+.container {
+  flex-direction: column;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9999;
+}
+
+.show {
+  display: flex;
+}
+
+.back-side {
+  height: 100%;
+  background-color: #000;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  transition-duration: .35s;
+  transition-property: opacity;
+  width: 100%;
+  z-index: 99999;
+}
+
+.dialog {
+  background-color: #fff;
+  border-radius: .2rem;
+  box-shadow: 0 19px 60px rgba(0,0,0,.3),0 15px 20px rgba(0,0,0,.22);
+  margin: 20px;
+  opacity: 1;
+  padding: 20px;
+  position: relative;
+  z-index: 99999;
+}
+
+.clearfix:after {
+  clear: both;
+  content: '';
+  display: block;
+}
+
+.label {
+  color: $settings-color;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.header-btn {
+  color: $successPass;
+  float: right;
+}
+
+.control-btn {
+  color: $successPass;
+  margin-left: 35px;
+}
+
+.control-panel {
+  display: flex;
+  justify-content: flex-end; 
+}
+
+.active {
+  opacity: .6;
+}
+
+.disabled {
+  opacity: .3;
+}

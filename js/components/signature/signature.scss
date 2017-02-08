@@ -1,0 +1,31 @@
+@import 'styles/variables';
+
+.container {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.wrapper {
+  width: 200px;
+  height: 140px;
+  border: 1px solid $barBg;
+  margin-right: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 13px;
+  font-size: 16px;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.error {
+  color: $error-color;
+}
+
+.date {
+  font-style: italic;
+}

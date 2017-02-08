@@ -1,0 +1,59 @@
+$spriteImage: 'images/BL_Sprite_common.svg';
+
+@mixin icon($position) {
+  background-image: url($spriteImage);
+  background-repeat: no-repeat;
+  background-position: $position;
+  display: inline-block;
+}
+
+.breakerlog {
+  @include icon(-486px -8px);
+}
+
+.dashboard {
+  @include icon(-763px 4px);
+}
+
+.hos {
+  @include icon(-662px -49px);
+}
+
+.settings {
+  @include icon(-662px -270px);
+}
+
+.support {
+  @include icon(-662px -331px);
+}
+
+.alerts {
+  @include icon(-828px -88px);
+}
+
+.dot {
+  @include icon(-846px -135px);
+}
+
+.list {
+  @include icon(-370px -7px);
+  width: 25px;
+  height: 25px;
+  float: left;
+}
+
+.logout {
+  @include icon(-662px -393px);
+}
+
+.arrowTop {
+  @include icon(-459px -33px);
+}
+
+.arrowBottom {
+  @include icon(-429px -33px);
+}
+
+.arrowLeft {
+  @include icon(-427px -6px);
+}

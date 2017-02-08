@@ -1,0 +1,46 @@
+// TODO
+:global(.pull-right) {
+  float: right;
+}
+
+:global(.right-indent) {
+  margin-right: 20px;
+}
+
+:global(.col-md-3) {
+  display: inline-block;
+  width: 33%;
+}
+
+:global(.col-md-5) {
+  display: inline-block;
+  width: 41.777%;
+}
+
+:global(.col-md-offset-1) {
+  margin-left: 3%;
+}
+
+:global(.col-md-offset-2) {
+  margin-left: 6%;
+}
+
+:global(.col-md-offset-3) {
+  margin-left: 9%;
+}
+
+:global(.col-md-offset-4) {
+  margin-left: 12%;
+}
+
+:global(.col-md-offset-5) {
+  margin-left: 15%;
+}
+
+:global(.hidden) {
+  display: none;
+}
+
+:global(.left-indent) {
+  margin-left: 20px;
+}
