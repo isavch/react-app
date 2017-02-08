@@ -7,25 +7,23 @@
    |- components/                     #React components
       |- myComponent/
           |- myComponet.scss          #Styles
-          |- index.js                 #Component
+          |- myComponent.js           #Component
           |- spec.js                  #Unit tests
           ...
-   |-containers/                      #High order components
-      |- laout/
-      |- pages/
-          |- dashboard/
-              |- index.js
-              |- dashboard.scss
+   |- routes/                      #High order components
+      |- login/
+      |- users/
+          |- containers
+          |- components/
+              |- users.js
+              |- users.scss
       ...
-    |- utils/                       #Helper utilities
+    |- services/                       #Helper utilities
+        |- api
         |- date
-        |- common
         .....
-    |- api/
-       index.js                      #Api module
     |- constants/                    #Application constants
     |- middleware/                   #Redux middleware
-        .....
 |- styles/                           #Common styles
     |- _base.scss
     |- _mixins.scss
@@ -43,7 +41,6 @@
 * [Redux] - Predictable state container for JavaScript apps
 * [React Router] - A complete routing library for React
 * [Webpack] - module bundler
-* [Babel] - js transpiler
 * [Mocha], [Chai], [Sinon], [Enzyme] - unit teststing
 * [SASS] - CSS with superpowers
 * [React-toolbox] - Set of react components
@@ -57,10 +54,12 @@ $ npm install
 ```
 
 ###  Build frontend
-Build files will be located in ./dist directory
+Set environment variable for REST API and run npm
 ```sh
-$ npm run build
+$ npm run build API_URL=https://my.api.com/ 
 ```
+Build files will be located in ./dist directory
+
 ###  Run linter
 Runs eslint with eleks corporate JS rules (./eslintrc)
 ```sh
@@ -78,7 +77,7 @@ $ npm run dev
 ```
 
 ### Server side requirements
-Fleetmanager application uses HTML5 History API, so it requires some server-side support.
+Application uses HTML5 History API, so it requires some server-side support.
 All GET requests should fallback to root route '/' which serves index.html, except static resources (css|jpg|gif|png|svg|ttf),and GET AJAX requests.
 
 ### Todos
@@ -95,7 +94,6 @@ License
    [Redux]: <http://redux.js.org/>
    [React Router]: <https://github.com/reactjs/react-router>
    [Webpack]: <https://webpack.github.io/>
-   [Babel]: <https://babeljs.io/>
    [Mocha]: <https://mochajs.org/>
    [Chai]: <http://chaijs.com/>
    [Sinon]: <http://sinonjs.org/>
