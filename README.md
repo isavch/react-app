@@ -41,9 +41,8 @@
 * [Redux] - Predictable state container for JavaScript apps
 * [React Router] - A complete routing library for React
 * [Webpack] - module bundler
-* [Mocha], [Chai], [Sinon], [Enzyme] - unit teststing
+* [Jest], [Enzyme] - unit teststing
 * [SASS] - CSS with superpowers
-* [React-toolbox] - Set of react components
 
 ### Installation
 
@@ -76,10 +75,6 @@ To launch webpack dev server
 $ npm run dev
 ```
 
-### Server side requirements
-Application uses HTML5 History API, so it requires some server-side support.
-All GET requests should fallback to root route '/' which serves index.html, except static resources (css|jpg|gif|png|svg|ttf),and GET AJAX requests.
-
 ### Todos
 
 
@@ -94,9 +89,7 @@ License
    [Redux]: <http://redux.js.org/>
    [React Router]: <https://github.com/reactjs/react-router>
    [Webpack]: <https://webpack.github.io/>
-   [Mocha]: <https://mochajs.org/>
-   [Chai]: <http://chaijs.com/>
-   [Sinon]: <http://sinonjs.org/>
+   [Jest]: <https://facebook.github.io/jest/>
    [Enzyme]: <https://github.com/airbnb/enzyme>
    [SASS]: <http://sass-lang.com/>
    [React-toolbox]: <http://react-toolbox.com/>

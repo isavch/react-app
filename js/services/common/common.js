@@ -1,5 +1,4 @@
 /** @module Common */
-import { countBy } from 'lodash';
 
 export {
   createReducer

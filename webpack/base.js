@@ -1,54 +1,84 @@
 var path = require('path');
 var webpack = require("webpack");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
     main: './js/main.js',
     vendors: [
-      'babel-polyfill',
+      'axios',
       'react',
-      'redux',
-      'react-redux',
-      'redux-thunk',
-      'redux-logger',
       'react-dom',
-      'lodash'
+      'react-router',
+      'redux',
+      'react-redux'
     ]
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
-    filename: '/js/[name].js',
-    chunkFilename: '/js/[name].js'
-  },
-  eslint: {
-    configFile: path.resolve(__dirname, '../.eslintrc'),
-    emitWarning: false,
-    failOnWarning: false,
-    failOnError: true
+    filename: '/js/[name].[chunkhash].js',
+    chunkFilename: '/js/[name].[chunkhash].js'
   },
   module: {
-    noParse: /jspdf/,
-    loaders: [
+    rules: [{
+        test: /\.scss$/,
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              camelCase: true,
+              importLoaders: 1,
+              localIdentName: '[name]__[local]--[hash:base64:5]'
+            }
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMaps: true
+            }
+          }
+        ]
+      },
       {
         test: /\.(jpg|gif|png|svg)$/,
-        loader: 'file?name=/img/[name].[ext]',
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '/images/[name].[ext]'
+          }
+        }],
         exclude: /node_modules/
       },
       {
         test: /\.(ttf|woff2)$/,
-        loader: 'file?name=/fonts/[name].[ext]'
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '/fonts/[name].[ext]'
+          }
+        }],
       },
       {
         test: /\.js$/,
-        loader: 'babel',
-        exclude: /node_modules/
-      },
-      {
-        test: /\.js$/,
-        loader: 'eslint-loader',
+        use: [
+          {
+            loader: 'babel-loader'
+          },
+          {
+            loader: 'eslint-loader',
+            options: {
+              configFile: path.resolve(__dirname, '../.eslintrc'),
+              emitWarning: false,
+              failOnWarning: false,
+              failOnError: true
+            }
+          }
+        ],
         exclude: /node_modules/
       }
     ]
@@ -65,13 +95,11 @@ module.exports = {
     }
   },
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin('vendors', '/js/vendors.js'),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendors'
+    }),
     new HtmlWebpackPlugin({
       template: path.resolve('./index.html')
-    }),
-    new CopyWebpackPlugin([{
-      from: path.resolve(__dirname, '../images'),
-      to: path.resolve(__dirname, '../dist/images')
-    }])
+    })
   ]
 };

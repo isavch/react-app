@@ -1,7 +1,4 @@
-spec.js
-specs/
+*.scss
 webpack
 dist
 node_modules
-*.scss
-config/*.js
