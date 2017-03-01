@@ -1,20 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import Notifications from './notifications';
-import Loader from './loader';
-
 class App extends Component {
   render() {
-    const { children, isLoading } = this.props;
+    const { children } = this.props;
 
     return (
         <div>
-          <Notifications />
-          <Loader isLoading={isLoading}/>
-          <div>
-            { children }
-          </div>
+          { children }
         </div>
     );
   }
