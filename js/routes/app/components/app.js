@@ -3,6 +3,11 @@ import {Link} from 'react-router';
 import { connect } from 'react-redux';
 
 class App extends Component {
+  componentDidMount() {
+    this.props.dispatch({
+      type: 'GET_USER'
+    });
+  }
   render() {
     const { children } = this.props;
 
