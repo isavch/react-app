@@ -7,6 +7,10 @@ import routes from './routes';
 import configureStore from './store';
 import 'styles/main.scss';
 
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service-worker.js');
+}
+
 /** Initialize app */
 render(
     <Provider store={configureStore()}>
