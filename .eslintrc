@@ -217,7 +217,7 @@
     }], // require space before/after arrow function"s arrow
     "constructor-super": 2, //verify calls of super() in constructors (recommended)
     "generator-star-spacing": [2, {
-        "before": true,
+        "before": false,
         "after": true
     }], // enforce spacing around the * in generator functions
     "no-class-assign": 2, //disallow modifying variables of class declarations (recommended)

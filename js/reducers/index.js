@@ -1,5 +1,4 @@
 import { combineReducers } from 'redux';
-import user from './user';
 import notifications from './notifications';
 import app from './app';
 
@@ -13,7 +12,6 @@ function createReducer(handlers) {
 }
 
 export default combineReducers({
-  user: createReducer(user),
   app: createReducer(app),
   notifications: createReducer(notifications)
 });

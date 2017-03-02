@@ -7,12 +7,14 @@ module.exports = {
   entry: {
     main: './js/main.js',
     vendors: [
+      'babel-polyfill',
       'axios',
       'react',
       'react-dom',
       'react-router',
       'redux',
-      'react-redux'
+      'react-redux',
+      'redux-saga'
     ]
   },
   output: {
