@@ -5,11 +5,8 @@ import {render} from 'react-dom';
 
 import routes from './routes';
 import configureStore from './store';
-import 'styles/main.scss';
 
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/service-worker.js');
-}
+import 'styles/main.scss';
 
 /** Initialize app */
 render(
