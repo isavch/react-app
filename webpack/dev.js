@@ -12,6 +12,7 @@ module.exports = Object.assign(base, {
   module: {
     rules: base.module.rules.concat()
   },
+  devtool: 'source-map',
   devServer: {
     port: 9000,
     compress: true,

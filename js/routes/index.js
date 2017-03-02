@@ -1,4 +1,5 @@
 import App from './app/components/app';
+import testRoute from './test-route';
 // import other from './other';
 // import users from './users';
 // import user from './user';
@@ -12,6 +13,7 @@ export default {
       path: '/',
       component: App,
       childRoutes: [
+        testRoute
         // users,
         // user,
         // organization,

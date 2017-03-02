@@ -39,7 +39,7 @@ module.exports = {
           {
             loader: 'sass-loader',
             options: {
-              sourceMaps: true
+              sourceMaps: false
             }
           }
         ]

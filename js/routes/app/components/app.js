@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router';
 import { connect } from 'react-redux';
 
 class App extends Component {
@@ -7,6 +8,7 @@ class App extends Component {
 
     return (
         <div>
+          <Link to="test-route">Test</Link>
           { children }
         </div>
     );
