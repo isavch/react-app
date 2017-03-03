@@ -7,7 +7,11 @@ export default function* userSaga() {
 }
 
 function* getUser() {
-  const userData = yield request(user);
+  try {
+    const userData = yield request(user);
 
-  yield put({type: 'GET_USER_START', payload: userData});
+    yield put({type: 'GET_USER_START', payload: userData});
+  } catch (error) {
+    yield put({type: 'GET_USER_START_FAIL', payload: error});
+  }
 }

@@ -1,4 +1,5 @@
 import axios from 'axios';
+import {info} from '../logger';
 
 export {
   request as default
@@ -14,10 +15,18 @@ function request(options) {
     })
   });
 
-  if (options) {
-    return Promise.resolve({name: 'User'});
-  }
+  info('REQUEST::START', options.url);
 
-  return axios(requestOptions);
+  return new Promise((resolve, reject) => {
+    axios(requestOptions)
+      .then(data => {
+        info('REQUEST::DONE', data);
+        resolve(data);
+      })
+      .catch(error => {
+        info('REQUEST::FAIL', error.message);
+        reject(error);
+      });
+  });
 }
 

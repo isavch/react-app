@@ -1,8 +1,13 @@
 export {
   log,
   warn,
+  info,
   error
 };
+
+function info(...args) {
+  console.info(...args); // eslint-disable-line
+}
 
 function log(...args) {
   console.log(...args); // eslint-disable-line
