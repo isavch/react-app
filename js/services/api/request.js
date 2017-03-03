@@ -17,6 +17,10 @@ function request(options) {
 
   info('REQUEST::START', options.url);
 
+  if (options) {
+    return Promise.resolve({data: 'data'});
+  }
+
   return new Promise((resolve, reject) => {
     axios(requestOptions)
       .then(data => {

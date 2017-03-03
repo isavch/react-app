@@ -1,4 +1,4 @@
-import { call, put } from 'redux-saga/effects';
+import { put } from 'redux-saga/effects';
 
 export {
   request as default
@@ -15,7 +15,7 @@ const errorHandler = {
 
 function* request(api) {
   try {
-    return yield call(api);
+    return yield api();
   } catch (error) {
     if (errorHandler[error.status]) {
       yield errorHandler[error.status](error);

@@ -1,7 +1,7 @@
-import user from './user';
+import userSaga from './user';
 
 export default function* rootSaga() {
   yield [
-    user()
+    userSaga()
   ];
 }
