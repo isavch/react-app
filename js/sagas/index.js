@@ -1,7 +1,13 @@
 import userSaga from './user';
+import errorWatcher from './error';
 
-export default function* rootSaga() {
+export {
+  rootSaga as default
+};
+
+function* rootSaga() {
   yield [
-    userSaga()
+    userSaga(),
+    errorWatcher()
   ];
 }

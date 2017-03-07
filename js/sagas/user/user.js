@@ -1,4 +1,3 @@
-import request from '../request';
 import user from '../../services/api/user';
 import { put, call, takeEvery } from 'redux-saga/effects';
 
@@ -8,10 +7,10 @@ export default function* userSaga() {
 
 export function* getUser() {
   try {
-    const userData = yield call(request, user);
+    const payload = yield call(user);
 
-    yield put({type: 'GET_USER_START', payload: userData});
+    yield put({type: 'GET_USER_START', payload});
   } catch (error) {
-    yield put({type: 'GET_USER_START_FAIL', payload: error});
+    yield put({type: 'GET_USER_START_FAIL', error});
   }
 }
